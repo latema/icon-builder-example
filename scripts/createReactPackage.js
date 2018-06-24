@@ -30,7 +30,7 @@ const getCreateIconSource = () => getTransformedSourceCode(`
 import React from 'react';
 
 const createIconComponent = ({ content, height='70', width='70' }) => (
-  props => <svg {...props} className={\`svg-icon \${props.className !== '' ? props.className : ''}\`} viewBox={\`0 0 \${width} \${height}\`}>{content}</svg>
+  props => <svg {...props} className={\`svg-icon\${props && props.className ? ' ' + props.className : ''}\`} viewBox={\`0 0 \${width} \${height}\`}>{content}</svg>
 )
 
 export default createIconComponent;
