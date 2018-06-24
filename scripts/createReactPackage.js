@@ -5,8 +5,7 @@ const transform = require('babel-core').transform;
 
 // Transform code to ES5
 const getTransformedSourceCode = (originalSource) => transform(originalSource, {
-  presets: [ 'react-native' ],
-  plugins: [ 'react-native-web' ]
+ presets: [ 'react' ],
 }).code;
 
 // Get the contents of the optimized SVG
